@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="icons">
+            <i class="bi bi-xbox close"></i>
+            <i class="bi bi-list bars"></i>
+            
+            <ul class="menu-List">
+                <li> <a href="#"> Home</a> </li>
+                <li> <a href="#"> About</a> </li>
+                <li> <a href="#"> Info</a> </li>
+                <li> <a href="#"> Contact</a> </li>                
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        const bars = document.querySelector(".bars");
+        const close = document.querySelector(".close");
+        const menuList = document.querySelector(".menu-List");
+
+        bars.addEventListener("click", () => {
+            menuList.classList.add("menu-open");
+            close.style.display = "block";
+            bars.style.display = "none";
+        });
+
+        close.addEventListener("click", () => {
+            menuList.classList.remove("menu-open");
+            close.style.display = "none";
+            bars.style.display = "block";
+        });
+    </script>
+
+
+
+ </body>
+</html>
